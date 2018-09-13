@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>factorial</title>
+</head>
+<body>
+   <script>
+
+       function recursiveFactorial(num)
+       {
+           if(num < 0) {
+               return -1;
+           }
+           else if(num === 0) {
+               return 1;
+           } else {
+               return num * recursiveFactorial(num-1);
+           }
+       }
+
+       function iterativeFactorial(num)
+       {
+           if (num < 0) {
+               return -1;
+           }
+           else if (num === 0) {
+               return 1;
+           }
+
+           var factorial = num;
+           num = num-1;
+           while (num > 1) {
+               factorial = factorial * num;
+               num = num -1;
+           }
+           return factorial;
+       }
+
+       console.log( "The factorial of 5 is:", recursiveFactorial( 0 ) );
+       console.log( "The factorial of 5 is:", iterativeFactorial( 5 ) );
+   </script>
+
+</body>
+</html>
